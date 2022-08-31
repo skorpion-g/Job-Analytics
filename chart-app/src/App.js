@@ -1,9 +1,9 @@
 import './App.css';
-import BarChart from './components/BarChart';
+import LineChart from './components/LineChart';
 
 const App = () => {
   return (
-    <BarChart />
+    <LineChart />
   )
 }
 
