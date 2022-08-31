@@ -2,24 +2,39 @@ import {
     Chart as ChartJS,
     CategoryScale,
     LinearScale,
-    BarElement,
+    LineElement,
+    PointElement,
     Title,
     Tooltip,
     Legend
   } from 'chart.js'
-import { Bar } from 'react-chartjs-2'
+import { Line } from 'react-chartjs-2'
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 ChartJS.register(
     CategoryScale,
     LinearScale,
-    BarElement,
+    LineElement,
+    PointElement,
     Title,
     Tooltip,
     Legend
   );
   
 const BarChart = () => {
+    let startYear = 0;
+    let endYear = 0;
+    let numJobsRegion = [];
+    let numJobsState = [];
+    let numJobsNation = [];
+    axios.get('https://run.mocky.io/v3/a2cc3707-8691-4188-8413-6183a7bb3d32')
+    .then(res => {
+        console.log(res.data);
+    })
+    .catch(err => {
+        console.log(err)
+    });
 
     const [chartData, setChartData] = useState({
         datasets: [],
@@ -29,7 +44,7 @@ const BarChart = () => {
 
     useEffect(() => {
         setChartData({
-            labels: ['Frankie', 'Tyler', 'Danielle', 'Sean', 'Aiden', 'Quoc'],
+            labels: ['2001', '2002', 'Danielle', 'Sean', 'Aiden', 'Quoc'],
             datasets: [
                 {
                     label: `Whom'st let the dogs out?`,
@@ -54,7 +69,7 @@ const BarChart = () => {
     }, [])
     return (
         <div>
-            <Bar 
+            <Line 
             options={chartOptions} data={chartData}
             />
         </div>
