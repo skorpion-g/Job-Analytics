@@ -51,7 +51,6 @@ const LineChart = () => {
                     startYear = parseInt(res.data.trend_comparison.start_year);
                     endYear = parseInt(res.data.trend_comparison.end_year);
                     range = rangeFinder(startYear, endYear);
-                    console.log('range', range)
                     for (const jobInfo of res.data.trend_comparison.regional) {
                         numJobsRegion.push(parseInt(jobInfo));
                     }
