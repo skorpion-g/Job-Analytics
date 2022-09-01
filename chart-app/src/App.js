@@ -2,6 +2,7 @@ import './App.css';
 import LineChart from './components/LineChart';
 import Summaries from './components/Summaries';
 import Table from './components/Table';
+import DataTable from './components/DataTable';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Summaries />
       <LineChart />
       <Table />
+      <DataTable />
     </div>
   )
 }
