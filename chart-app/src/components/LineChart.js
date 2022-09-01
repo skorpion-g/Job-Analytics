@@ -79,20 +79,20 @@ const LineChart = () => {
                     {
                         label: `Region`,
                         data: percentChangeRegion,
-                        borderColor: 'rgb(255, 0, 0)',
-                        backgroundColor: 'rgba(255, 10, 10, 0.4)',
+                        borderColor: 'rgb(152, 255, 152)',
+                        backgroundColor: 'rgba(162, 228, 184, 0.4)',
                     },
                     {
                         label: `State`,
                         data: percentChangeState,
-                        borderColor: 'rgb(0,0,255)',
-                        backgroundColor: 'rgba(10, 10, 255, 0.4)',
+                        borderColor: 'rgb(0, 0, 0)',
+                        backgroundColor: 'rgba(255, 255, 255, 0.4)',
                     },
                     {
                         label: `Nation`,
                         data: percentChangeNation,
-                        borderColor: 'rgb(0,255,0)',
-                        backgroundColor: 'rgba(10, 255, 10, 0.4)',
+                        borderColor: 'rgb(128, 128, 128)',
+                        backgroundColor: 'rgba(169, 169, 169, .4)',
                     },
                 ],
             });

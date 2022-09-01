@@ -14,7 +14,7 @@ const Summaries = () => {
                 console.log(err);
             })
             .finally(() => setLoaded(true));
-    }
+    };
 
     useEffect(() => {
         fetchData()

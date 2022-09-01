@@ -37,3 +37,24 @@ header, .row {
   border-width: 1px;
   border-color: gray;
 }
+
+th {
+  width: 200px;
+  padding: 5px;
+  text-align: left;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: gray;
+}
+
+td {
+  padding: 5px;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: gray;
+}
+
+.region-col {
+  text-align: left;
+  width: 1300px;
+}
