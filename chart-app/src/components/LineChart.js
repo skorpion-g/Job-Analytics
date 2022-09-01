@@ -128,6 +128,7 @@ const LineChart = () => {
     }, []);
     return (
         <div>
+            <h2 className="linechart-title">Regional Trends</h2>
             <Line
                 options={chartOptions} data={chartData}
             />
