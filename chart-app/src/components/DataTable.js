@@ -22,7 +22,7 @@ const DataTable = () => {
         let rowCounter = 0;
         return (
             <div>
-                <h2 className="industry-title">Industries Employing {dataTableData.occupation.title}</h2>
+                <h2 className="title">Industries Employing {dataTableData.occupation.title}</h2>
                 <table id="industries">
                     <tbody>
                         <tr>

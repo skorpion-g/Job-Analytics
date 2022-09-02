@@ -59,10 +59,15 @@ td {
   width: 1300px;
 }
 
-.industry-title {
+.title {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-bottom: solid;
   border-width: 1px;
   border-color: gray;
+}
+
+.title2 {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
 #industries {

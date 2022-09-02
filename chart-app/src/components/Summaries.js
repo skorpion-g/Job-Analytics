@@ -23,8 +23,8 @@ const Summaries = () => {
     if (loaded) {
         return (
             <div>
-                <h3>{jobData.occupation.title} in {jobData.region.title}</h3>
-                <h2 className="summaries-title">Occupation Summary for {jobData.occupation.title}</h2>
+                <h3 className="title2">{jobData.occupation.title} in {jobData.region.title}</h3>
+                <h2 className="title2">Occupation Summary for {jobData.occupation.title}</h2>
                 <header>
                     <div className="jobs-summary col">
                         <Summary jobData={jobData.summary.jobs} />

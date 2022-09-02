@@ -7,7 +7,7 @@ import DataTable from './components/DataTable';
 const App = () => {
   return (
     <div>
-      <h1>Occupation Overview</h1>
+      <h1 className="title">Occupation Overview</h1>
       <Summaries />
       <LineChart />
       <Table />
