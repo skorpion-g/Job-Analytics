@@ -22,26 +22,42 @@ const DataTable = () => {
     if (loaded) {
         return (
             <div>
-                <h2>Industries Employing {dataTableData.occupation.title}</h2>
-                <table>
-                    <tbody>
-                        <tr>
-                            <th className="region-col">Industry</th>
-                            <th>Occupation Jobs<br />in Industry<br />&#40;{dataTableData.employing_industries.year}&#41;</th>
-                            <th>% of Occupation<br />in Industry<br />&#40;{dataTableData.employing_industries.year}&#41;</th>
-                            <th>% of Total<br />Jobs in<br />Industry<br />&#40;{dataTableData.employing_industries.year}&#41;</th>
-                        </tr>
-                        {dataTableData.employing_industries.industries.map((industry) => (
-                            <tr>
-                                <th style={{width: `${(industry.in_occupation_jobs/dataTableData.employing_industries.industries[0].in_occupation_jobs)*100}%`, backgroundColor:"rgba(135,206,235,0.3)"}}>🏢{industry.title}</th>
-                                <th>{industry.in_occupation_jobs}</th>
-                                <th>{((industry.in_occupation_jobs/dataTableData.employing_industries.jobs)*100).toFixed(1)}</th>
-                                <th>{((industry.in_occupation_jobs/industry.jobs)*100).toFixed(1)}</th>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+                <div className="row">
+                    <div className="region-col column">Industry</div>
+                    <div className="column">Occupation Jobs<br />in Industry<br />&#40;{dataTableData.employing_industries.year}&#41;</div>
+                    <div className="column">% of Occupation<br />in Industry<br />&#40;{dataTableData.employing_industries.year}&#41;</div>
+                    <div className="column">% of Total<br />Jobs in<br />Industry<br />&#40;{dataTableData.employing_industries.year}&#41;</div>
+                </div>
+                {dataTableData.employing_industries.industries.map((industry) => (
+                            <div className="row">
+                                <div className="region-col column" style={{color: "rgb(0, 150, 255)", backgroundSize: `10%`, backgroundColor:"rgba(135,206,235,0.3)"}}>🏢{industry.title}</div>
+                                <div className="column">{industry.in_occupation_jobs}</div>
+                                <div className="column">{((industry.in_occupation_jobs/dataTableData.employing_industries.jobs)*100).toFixed(1)}</div>
+                                <div className="column">{((industry.in_occupation_jobs/industry.jobs)*100).toFixed(1)}</div>
+                            </div>
+                ))}
             </div>
+            // <div>
+            //     <h2>Industries Employing {dataTableData.occupation.title}</h2>
+            //     <table>
+            //         <tbody>
+            //             <tr>
+            //                 <th className="region-col">Industry</th>
+            //                 <th>Occupation Jobs<br />in Industry<br />&#40;{dataTableData.employing_industries.year}&#41;</th>
+            //                 <th>% of Occupation<br />in Industry<br />&#40;{dataTableData.employing_industries.year}&#41;</th>
+            //                 <th>% of Total<br />Jobs in<br />Industry<br />&#40;{dataTableData.employing_industries.year}&#41;</th>
+            //             </tr>
+            //             {dataTableData.employing_industries.industries.map((industry) => (
+            //                 <tr>
+            //                     <th style={{color: "rgb(0, 150, 255)", backgroundSize: `10%`, backgroundColor:"rgba(135,206,235,0.3)"}}>🏢{industry.title}</th>
+            //                     <th>{industry.in_occupation_jobs}</th>
+            //                     <th>{((industry.in_occupation_jobs/dataTableData.employing_industries.jobs)*100).toFixed(1)}</th>
+            //                     <th>{((industry.in_occupation_jobs/industry.jobs)*100).toFixed(1)}</th>
+            //                 </tr>
+            //             ))}
+            //         </tbody>
+            //     </table>
+            // </div>
         )
     }
     return <span>Loading...</span>

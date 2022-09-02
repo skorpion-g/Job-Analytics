@@ -58,3 +58,18 @@ td {
   text-align: left;
   width: 1300px;
 }
+
+.row {
+  text-align: left;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.column {
+  text-align: left;
+  display: table-cell;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: gray;
+}
