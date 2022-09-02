@@ -59,17 +59,38 @@ td {
   width: 1300px;
 }
 
-.row {
-  text-align: left;
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-}
-
-.column {
-  text-align: left;
-  display: table-cell;
+.industry-title {
   border-bottom: solid;
   border-width: 1px;
   border-color: gray;
 }
+
+#industries {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  display: table;
+  border-spacing: 2px;
+  border-color: gray;
+}
+
+#industries th {
+  font-size: 1.4em;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  padding: 3px 7px 2px 7px;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+#industries td, #industries th {
+font-size: 1.2em;
+padding: 3px 7px 2px 7px;
+}
+
+.bg{background-color:#ff00ff;}
