@@ -46,7 +46,7 @@ const LineChart = () => {
             let percentChangeState = [];
             let numJobsNation = [];
             let percentChangeNation = [];
-            await axios.get('https://run.mocky.io/v3/a2cc3707-8691-4188-8413-6183a7bb3d32')
+            await axios.get('https://run.mocky.io/v3/aa8cc360-0948-4b78-8078-e72689b7aecf')
                 .then(res => {
                     startYear = parseInt(res.data.trend_comparison.start_year);
                     endYear = parseInt(res.data.trend_comparison.end_year);

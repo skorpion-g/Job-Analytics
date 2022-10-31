@@ -5,7 +5,7 @@ const DataTable = () => {
     const [dataTableData, setDataTableData] = useState(null);
     const [loaded, setLoaded] = useState(false)
     const fetchData = async () => {
-        await axios.get('https://run.mocky.io/v3/a2cc3707-8691-4188-8413-6183a7bb3d32')
+        await axios.get('https://run.mocky.io/v3/aa8cc360-0948-4b78-8078-e72689b7aecf')
             .then(res => {
                 setDataTableData(res.data)
             })
