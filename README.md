@@ -1,4 +1,4 @@
-# job-analytics
+# Job-Analytics
 
 ## Stack: 
 Node.js, React.js, JavaScript
